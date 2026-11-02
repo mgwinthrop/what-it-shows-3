@@ -4,21 +4,21 @@
 		<link href="../../_app/immutable/chunks/CptVIHXj.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/CHfFqfNT.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DQG8lHS1.js" rel="modulepreload">
-		<link href="../../_app/immutable/entry/app.BFFDxqJ7.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.B7d-jloz.js" rel="modulepreload">
 		<link href="../../_app/immutable/nodes/0.Izv2btRW.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
-		<link href="../../_app/immutable/nodes/5.DyonSTCO.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/B6qMroJT.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/5.BYeUrVU_.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/2isqjiT9.js" rel="modulepreload">
 		<link href="../../_app/immutable/chunks/DkoUumqI.js" rel="modulepreload">
-		<link href="../../_app/immutable/chunks/D_S-iv6j.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DcZ9TEUN.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CVBzP17p.js" rel="modulepreload">
 		<!--e2jw2j--><!----><title>#4471 · what the merge held: three problems, not one · support kb</title>
 		<link href="../../_app/immutable/assets/runbook.COyw0cbZ.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/Callout.AbLv9dM_.css" rel="stylesheet">
 		<link href="../../_app/immutable/assets/_page.WePi3wDe.css" rel="stylesheet"></head><body><!--[--><!--[--><!--[0--><!--[--><!--[--><!--[-1--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · what the merge held: three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>support desk</b></span> <span class="status living svelte-e2jw2j">living</span> <span class="svelte-e2jw2j">reviewed 2026-10-31 · 2 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> says one issue and one fix. The 412 reports merged into it are not
 one issue. Read against the tenant directory (locale and booking form) and the report bodies,
 they hold three problems. Only the first is the parser bug the ticket describes.</p> <aside class="note svelte-17bri61"><!---->The parser fix will not stop problems 2 and 3. They have no ticket of their own until the
-tickets below are filed.<!----></aside><!----> <h2>The three problems</h2> <table><thead><tr><th>#</th><th>problem</th><th>reports</th><th>tenants</th><th>seen</th></tr></thead><tbody><tr><td>1</td><td>The shared parser reads every date month first, so day-first tenants get flipped dates</td><td>374</td><td>11</td><td>2026-04-01 → 2026-10-04</td></tr><tr><td>2</td><td>Booking form v3 prints <code>MM/DD/YYYY</code> under the date field, so people in day-first tenants type month first</td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td></tr><tr><td>3</td><td>An invite lands one day off, with no month flip: a time zone or day boundary problem</td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td></tr></tbody></table> <p>374 + 33 + 5 = 412. Every report is counted once. The export holds 427 rows because its pages
-overlap; 15 reports appear twice and are counted once.</p> <p><strong>How this differs from the desk’s cause table.</strong> The cause table counts by tenant and channel
+tickets below are filed.<!----></aside><!----> <h2>The three problems</h2> <table><thead><tr><th>#</th><th>problem</th><th>reports</th><th>tenants</th><th>seen</th></tr></thead><tbody><!--[--><tr><td>1</td><td>The shared parser reads every date month first, so day-first tenants get flipped dates</td><td>374</td><td>11</td><td>2026-04-01 → 2026-10-04</td></tr><tr><td>2</td><td>Booking form v3 prints `MM/DD/YYYY` under the date field, so people in day-first tenants type month first</td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td></tr><tr><td>3</td><td>An invite lands one day off, with no month flip: a time zone or day boundary problem</td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td></tr><!--]--></tbody></table> <p>374 + 33 + 5 = 412. Every report is counted once.</p><!----> <p>The export holds 427 rows because its pages overlap; 15 reports appear twice and are counted once.</p> <p><strong>How this differs from the desk’s cause table.</strong> The cause table counts by tenant and channel
 only, so it shows two causes: parser 379 and hint 33. It files the 5 one-day reports under the
 parser and footnotes them (R-41202, R-41209, R-41236, R-41344, R-41620; the desk lists them in
 its own notes). Their bodies describe a day shifting, not a month flipping: the same meeting
@@ -38,16 +38,16 @@ changes.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="s
 			
 			<script>
 				{
-					__sveltekit_etc45t = {
+					__sveltekit_b954e0 = {
 						base: new URL("../..", location).pathname.slice(0, -1),
-						version: "1793633209342"
+						version: "1793636769785"
 					};
 
 					const element = document.currentScript.parentElement;
 
 					import("../../_app/immutable/entry/start.D1HzdfF7.js").then(async (kit) => {
-						kit.init(__sveltekit_etc45t);
-						const app = await import("../../_app/immutable/entry/app.BFFDxqJ7.js");
+						kit.init(__sveltekit_b954e0);
+						const app = await import("../../_app/immutable/entry/app.B7d-jloz.js");
 						kit.start(app, element, {
 							node_ids: [0, 5],
 							data: [null,null],
